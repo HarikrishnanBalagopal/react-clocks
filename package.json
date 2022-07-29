@@ -6,7 +6,7 @@
   "scripts": {
     "start:dev": "webpack serve",
     "build": "webpack",
-    "start": "cd dist/ && python3 -m http.server 8080"
+    "start": "cd docs/ && python3 -m http.server 8080"
   },
   "keywords": [],
   "author": "",

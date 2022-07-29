@@ -2,7 +2,7 @@ import { Clock } from "./clock";
 import '../styles/main.css';
 
 export const Main = () => (
-    <div>
+    <div className="my-app">
         <h1>Clocks</h1>
         <div className="my-grid">
             <Clock/>

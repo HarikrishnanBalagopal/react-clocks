@@ -32,21 +32,18 @@ export const Clock = ({ offset }) => {
             <div>The time{offset ? ` with an offset of ${offset} hours` : ''} is: {date.toLocaleTimeString()}</div>
             <svg viewBox="-1 -1 2 2" xmlns="http://www.w3.org/2000/svg">
                 <circle r=".8" cx="0" cy="0" fill="none" stroke="black" strokeWidth={.1}></circle>
+                <text fontFamily="monospace" fontSize={.1}>
+                    <textPath href="#clock-bottom" textLength='100%'>9 8 7 6 5 4 3</textPath>
+                </text>
+                <path id="clock-top" fill="none" stroke="none" strokeWidth={.075} d="M .7 0 A .5 .5 0 1 0 -.7 0" />
+                <text fontFamily="monospace" fontSize={.1}>
+                    <textPath href="#clock-top" textLength='70%' startOffset='15%'>2 1 0 1 X</textPath>
+                </text>
                 <path d={`M 0 0 L ${hourX} ${hourY}`} fill="none" stroke="black" strokeWidth={.075} strokeLinecap="round" />
                 <path d={`M 0 0 L ${minX} ${minY}`} fill="none" stroke="black" strokeWidth={.05} strokeLinecap="round" />
                 <path d={`M 0 0 L ${secX} ${secY}`} fill="none" stroke="red" strokeWidth={.04} strokeLinecap="round" />
                 <path id="clock-bottom" fill="none" stroke="none" strokeWidth={.075} d="M -.7 0 A .5 .5 0 1 0 .7 0" />
-                <text fontFamily="monospace" fontSize={.1}>
-                    <textPath href="#clock-bottom" textLength='100%'>
-                        9 8 7 6 5 4 3
-                    </textPath>
-                </text>
-                <path id="clock-top" fill="none" stroke="none" strokeWidth={.075} d="M .7 0 A .5 .5 0 1 0 -.7 0" />
-                <text fontFamily="monospace" fontSize={.1}>
-                    <textPath href="#clock-top" textLength='70%' startOffset='15%'>
-                        2 1 0 1 X
-                    </textPath>
-                </text>
+
             </svg>
         </div>
     );

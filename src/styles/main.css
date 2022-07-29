@@ -1,5 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+#root {
+    padding: 1em;
+    height: 100vh;
+}
+
+.my-app {
+    max-height: 100%;
+}
+
 .my-grid {
+    max-height: 100%;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+}
+
+svg {
+    max-height: 30em;
 }
